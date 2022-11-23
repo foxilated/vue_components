@@ -1,9 +1,10 @@
 <script setup>
-import TheWelcome from "../components/TheWelcome.vue";
+import { getPosts } from '@/api/utils';
+const posts = await getPosts();
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
+  <main class="flex items-center justify-center h-screen">
+    {{ posts }}
   </main>
 </template>
